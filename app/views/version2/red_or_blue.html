@@ -1,0 +1,57 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="redOrBlue-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Take the red pill or the blue pill?
+            </h1>
+          </legend>
+          <div id="redOrBlue-hint" class="govuk-hint">
+            Choose the red pill to learn a life-changing truth, or choose the blue pill to remain in ordinary reality
+          </div>
+          <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="redOrBlue" name="redOrBlue" type="radio" value="red">
+              <label class="govuk-label govuk-radios__label" for="redOrBlue">
+                Red pill
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="redOrBlue-2" name="redOrBlue" type="radio" value="blue">
+              <label class="govuk-label govuk-radios__label" for="redOrBlue-2">
+                Blue pill
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
+
+    <h1 class="govuk-heading-xl">
+      {{ serviceName }}
+    </h1>
+
+    <p class="govuk-body">TEST This kit includes:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>versioning structure</li>
+      <li>routing radios</li>
+    </ul>
+
+    <p class="govuk-body">Quick links</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a class="govuk-link" href="version1/red_or_blue.html">Version 1 start</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="version2/red_or_blue.html">Version 2 start</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="version2/action_page_1">Routing with HTML action attribute example</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="version1/checkbox_example/ingredients.html">Checkbox journey example</a>
+      </li>
+    </ul>
+
+    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
+  </div>
+</div>
+
+{% endblock %}

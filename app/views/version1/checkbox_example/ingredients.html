@@ -1,0 +1,69 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="ingredients-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Which ingredients do you have?
+            </h1>
+          </legend>
+          <div id="ingredients-hint" class="govuk-hint">
+            Select all that apply.
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="ingredients" name="ingredients" type="checkbox" value="eggs">
+              <label class="govuk-label govuk-checkboxes__label" for="ingredients">
+                Eggs
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="ingredients-2" name="ingredients" type="checkbox" value="flour">
+              <label class="govuk-label govuk-checkboxes__label" for="ingredients-2">
+                Flour
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="ingredients-3" name="ingredients" type="checkbox" value="sugar">
+              <label class="govuk-label govuk-checkboxes__label" for="ingredients-3">
+                Sugar
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="ingredients-3" name="ingredients" type="checkbox" value="butter">
+              <label class="govuk-label govuk-checkboxes__label" for="ingredients-4">
+                Butter
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
